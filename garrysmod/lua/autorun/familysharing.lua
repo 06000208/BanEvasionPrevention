@@ -91,6 +91,31 @@ DO NOT TOUCH ANYTHING BELOW THIS POINT UNLESS YOU KNOW WHAT YOU ARE DOING.
 THIS BLOCK IS ENTIRELY WRITTEN IN CAPS LOCK TO SHOW YOU HOW SERIOUS I AM.
 ]]
 
+--Function to test if the script is configured and working
+local function ulx.familysharing(ply)
+	if APIKey == "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" then
+		ply.ChatPrint("APIKey is still on default setting. Please change")		
+	end
+	http.Fetch(
+		string.format("http://api.steampowered.com/ISteamWebAPIUtil/GetServerInfo/v0001/"),
+		function(body)
+			body = util.JSONToTable(body)
+			--If the response does not contain the following table items.
+			if not body or not body.response or not body.response.servertime then
+				ply.ChatPrint("Unable to reach SteamAPI. Please check your server host settings")
+			end
+		end,
+		function(code)
+			error(string.format("FamilySharing: Failed API call for %s | %s (Error: %s)\n", ply:Nick(), ply:SteamID(), code))
+		end
+	)
+end
+
+--Adding ULX command
+local familysharing = ulx.command("", "ulx familysharing", ulx.familysharing, "!familysharing", true)
+familysharing:defaultAccess(ULib.ACCESS_SUPERADMIN)
+familysharing:help("Checks if family sharing is operational")
+
 --Function to handle those who connect via family shared steam accounts.
 local function HandleSharedPlayer(ply, lenderSteamID)
 	--Log to server console who has been detected family sharing.
