@@ -1,8 +1,11 @@
 --[[
 Credits :
-C0nw0nk
+C0nw0nk, for the original addon https://github.com/C0nw0nk/Garrys-Mod-Family-Sharing
+WorldOfSoap
+mralimac, for https://github.com/goonskeep/BanEvasionPrevention/pull/1/commits/5f3336e62e5f21ecdfeed2a6d04f436869dbf965
 
-Github : https://github.com/C0nw0nk/Garrys-Mod-Family-Sharing
+Repo : https://github.com/goonskeep/BanEvasionPrevention
+Upstream : https://github.com/C0nw0nk/Garrys-Mod-Family-Sharing
 
 Info :
 This script will make it very hard for users who you ban from your server to return or bypass their current/existing bans.
@@ -92,6 +95,31 @@ DO NOT TOUCH ANYTHING BELOW THIS POINT UNLESS YOU KNOW WHAT YOU ARE DOING.
 
 THIS BLOCK IS ENTIRELY WRITTEN IN CAPS LOCK TO SHOW YOU HOW SERIOUS I AM.
 ]]
+
+--Function to test if the script is configured and working
+local function ulx.familysharing(ply)
+	if APIKey == "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" then
+		ply.ChatPrint("APIKey is still on default setting. Please change")		
+	end
+	http.Fetch(
+		string.format("http://api.steampowered.com/ISteamWebAPIUtil/GetServerInfo/v0001/"),
+		function(body)
+			body = util.JSONToTable(body)
+			--If the response does not contain the following table items.
+			if not body or not body.response or not body.response.servertime then
+				ply.ChatPrint("Unable to reach SteamAPI. Please check your server host settings")
+			end
+		end,
+		function(code)
+			error(string.format("FamilySharing: Failed API call for %s | %s (Error: %s)\n", ply:Nick(), ply:SteamID(), code))
+		end
+	)
+end
+
+--Adding ULX command
+local familysharing = ulx.command("", "ulx familysharing", ulx.familysharing, "!familysharing", true)
+familysharing:defaultAccess(ULib.ACCESS_SUPERADMIN)
+familysharing:help("Checks if family sharing is operational")
 
 --Function to handle those who connect via family shared steam accounts.
 local function HandleSharedPlayer(ply, lenderSteamID)
