@@ -7,22 +7,22 @@ Additional terms to AGPLv3
 
 In compliance with section 7 of the GNU AGPLv3 the following additional terms apply:
 
-a) The contained and displayed credits hook notice may not be removed,
+- a) The contained and displayed credits hook notice may not be removed,
   modified, altered or styled, or being removed, modified, altered or styled by
   external software (scripts, stylesheets, filters) in a way that would considerably
   affect visibility or readability of the notice to the user or any third party that
   uses the software locally or over the network; this especially includes resizing,
   overlaying, hiding or similar techniques.
 
-b) You may adjust or style the credits hook to suit the appearance or layout of
+- b) You may adjust or style the credits hook to suit the appearance or layout of
   your server and / or ingame chat as long as this does not violate the terms given in section (a)
 
-c) You may add your name to the list of copyright holder(s) in the credits hook if you make
+- c) You may add your name to the list of copyright holder(s) in the credits hook if you make
   changes to the work, keeping intact all other copyright holder names
   
-d) These terms could be updated for any reason at any time and what ever additional terms will also
+- d) These terms could be updated for any reason at any time and what ever additional terms will also
   apply to the current and previous releases of the copyright holder(s) work.
 
-e) Changes to these terms require written permission by the copyright holder(s).
+- e) Changes to these terms require written permission by the copyright holder(s).
 
-f) You will not host, distribute, modify, change, use or copy the Content if you are affiliated with The Snackbar (the-snackbar.com) or their servers.
+- f) You will not host, distribute, modify, change, use or copy the Content if you are affiliated with The Snackbar (the-snackbar.com) or their servers.
