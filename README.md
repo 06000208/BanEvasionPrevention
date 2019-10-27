@@ -1,6 +1,10 @@
-# Garrys-Mod-Family-Sharing
+# BanEvasionPrevention
 
-Prevent players bypassing existing bans on Garrys Mod Servers.
+This addon is intended to prevent players bypassing existing bans on Garry's Mod Servers.
+
+We plan on refactoring it in the future. For now, enjoy the original description:
+
+## Garrys-Mod-Family-Sharing
 
 The way this script works is it lets family sharing users join and play (Unless you enable the block all family shared accounts feature.) When you ban a player from your server it will check if the account is shared if it is it will ban both the owners steam account and the shared account they are currently connected via thus preventing any more alts joining.
 
@@ -12,7 +16,7 @@ This will also "if enabled." add banning users by IP address to the default ULX 
 
 If you have any bugs issues or problems just post a Issue request. https://github.com/C0nw0nk/Garrys-Mod-Family-Sharing/issues
 
-# Features :
+## Features :
 
 Banning those who try to bypass current / existing bans. (Default : TRUE)
 
@@ -36,7 +40,7 @@ Ban tracker to prevent players buying a new GMod Garry's Mod in order to connect
 
 Ban tracker paths settings and options all configurable.
 
-# How to install
+## How to install
 
 Install the script to the `"/garrysmod/lua/autorun/"` folder.
 
@@ -61,17 +65,17 @@ Inside your `server.cfg` file make sure you have the following : (This makes sur
 
 `exec banned_ip.cfg`
 
-# Usage :
+## Usage :
 
 In order to ban users family sharing the script will do it all automaticly so you don't have to worry about a thing all you have to do is use either the `!ban` or `!banid` command in chat or you can use the ULX menu `!menu` or `ulx ban` / `ulx banid` via the console. The script does all the rest.
 
-# Recommended Settings :
+## Recommended Settings :
 
 I recommend default settings and the only settings I ever recommend every server owner change is the following that way your server is unique and uses its own paths to track banned players.
 
 https://github.com/C0nw0nk/Garrys-Mod-Family-Sharing/blob/master/garrysmod/lua/autorun/familysharing.lua#L62-L72
 
-# Dependencies / Requirements :
+## Dependencies / Requirements :
 
 ULX / ULIB :
 
