@@ -1,8 +1,8 @@
 --[[
 Credits :
 C0nw0nk, for the original addon https://github.com/C0nw0nk/Garrys-Mod-Family-Sharing
-WorldOfSoap
 mralimac, for https://github.com/goonskeep/BanEvasionPrevention/pull/1/commits/5f3336e62e5f21ecdfeed2a6d04f436869dbf965
+Currently being maintained by the goonskeep team
 
 Repo : https://github.com/goonskeep/BanEvasionPrevention
 Upstream : https://github.com/C0nw0nk/Garrys-Mod-Family-Sharing
