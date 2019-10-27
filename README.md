@@ -1,6 +1,10 @@
-# Garrys-Mod-Family-Sharing
+# BanEvasionPrevention
 
-Prevent players bypassing existing bans on Garrys Mod Servers.
+This addon is intended to prevent players bypassing existing bans on Garry's Mod Servers.
+
+We plan on refactoring it in the future. For now:
+
+# Garrys-Mod-Family-Sharing
 
 The way this script works is it lets family sharing users join and play (Unless you enable the block all family shared accounts feature.) When you ban a player from your server it will check if the account is shared if it is it will ban both the owners steam account and the shared account they are currently connected via thus preventing any more alts joining.
 
