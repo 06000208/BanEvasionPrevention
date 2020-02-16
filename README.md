@@ -1,8 +1,8 @@
 # BanEvasionPrevention
 
-This addon is intended to prevent players bypassing existing bans on Garry's Mod Servers.
+This addon is intended to prevent players bypassing existing bans on Garry's Mod Servers, but It's fairly outdated and unmaintained, at least this version.
 
-We plan on refactoring it in the future. For now, enjoy the original description:
+As such, I plan on refactoring it in the future. For now, enjoy the original description:
 
 ## Garrys-Mod-Family-Sharing
 
